@@ -16,7 +16,7 @@ export default async function App() {
       <Image src="/mypic.jpg" width={400} height={400} alt="My Picture" style={{ width: "30%", height: "auto" }} />
       <h1 className="text-3xl">รายชื่อผู้ใช้</h1>
       <ul className="list-disc pl-5">
-        {users.map((user: any) => (
+        {users.map((user: { id: number; name: string; email: string }) => (
           <li key={user.id}>
             {user.name} ({user.email})
           </li>
